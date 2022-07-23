@@ -8,7 +8,7 @@ const express = require('express');
 const path = require('path');
 
 // déclaration de la route pour l'authentification
-//const userRoutes = require('./routes/user');
+const userRoutes = require('./routes/UserRoutes');
 
 //déclaration de la route pour le profil
 //const profileRoutes = require('./routes/profile')
@@ -34,7 +34,7 @@ app.use(express.json());
 //app.use(expressSanitizer());
 
 // middleware qui définit la route pour l'authentification
-//app.use('/api/auth', userRoutes);
+app.use('/api/auth', userRoutes);
 
 // middleware qui définit la route pour le profil utilisateur
 //app.use('/api/profile', profileRoutes);

@@ -45,12 +45,15 @@ db.User.hasMany(db.Prestation, {
     foreignKey: 'userId',
     sourceKey: 'id'
 });
+db.Prestation.belongsTo(db.User);
 
 // on connecte les entreprises avec les prestations
 db.Enterprise.hasMany(db.Prestation, {
     foreignKey: 'enterpriseId',
     sourceKey: 'id'
 });
+db.Prestation.belongsTo(db.Enterprise);
+
 
 // on connecte les posts et les commentaires en fonction de l'id des posts
 //db.Post.hasMany(db.Comment, {foreignKey: 'postId', sourceKey: 'id'});

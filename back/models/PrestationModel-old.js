@@ -2,11 +2,11 @@
 module.exports = (sequelize, Sequelize, DataTypes) => {
     const Prestation = sequelize.define("Prestation", {
         start: {
-            type: Sequelize.DATETIME,
+            type: Sequelize.DATE,
             allowNull: false
         },
         end: {
-            type: Sequelize.DATETIME,
+            type: Sequelize.DATE,
             allowNull: false
         },
         enterpriseId: {
